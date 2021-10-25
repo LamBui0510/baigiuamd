@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = +prompt(" Nhập số phần tử của mảng");
+    let arr = new Array(numbers);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = Math.round(Math.random() * 100 + 1)
+    }
+    for (let i = 0; i < arr.length; i++) {
+        if( (arr[i] % 2) !==0){
+                return arr[i]
+        }
+
+    }
+    function sum(numbers) {
+
+        for (let i = 2; i <= Math.sqrt(numbers); i++) {
+            if ( % i === 0) {
+                 sum += arr[i]
+            }
+        }
+</script>
+
+
+</body>
+</html>

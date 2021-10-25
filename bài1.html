@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Enter a number:  <input type="number" name="number" id="number">
+<button name="button" type="button" onclick="show()"> Show </button>
+</h1>
+<p id="result"> </p>
+<script>
+    //ktra snt
+    function isPrime(a) {
+        if(a<2){
+            return false;
+        }else {
+            for (let i = 2; i <= Math.sqrt(a); i++) {
+                if (a % i === 0) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    // hành động click show
+
+    function show() {
+        let number = +document.getElementById("number").value;
+        let count = 0;
+        let result = [];
+        for (let j = 2; count <= number; j++) {
+            if (isPrime(j)) {
+                result.push(j)
+                count++;
+            }
+        }
+        document.getElementById("result").innerHTML = result;
+    }
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
